@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import NavBar from './components/NavBar';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import AuthCallback from './pages/AuthCallback';
+import AuthError from './pages/AuthError';
 
 // PUBLIC_INTERFACE
 function App() {
@@ -34,6 +36,8 @@ function App() {
           <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/auth/error" element={<AuthError />} />
           <Route path="*" element={<div style={{ padding: 24 }}>Not Found</div>} />
         </Routes>
       </Router>
